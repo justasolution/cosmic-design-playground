@@ -11,24 +11,22 @@ const Hero = () => {
         size="200px"
         position="top-20 right-[20%]"
         animation="animate-float"
-        className="opacity-70"
+        className="opacity-40"
       />
       <Planet
         size="300px"
         position="bottom-40 left-[10%]"
         animation="animate-float-slow"
-        className="opacity-50"
+        className="opacity-30"
       />
       <Planet
         size="150px"
         position="top-[30%] left-[15%]"
         animation="animate-float"
-        className="opacity-60"
+        className="opacity-40"
       />
       
-      {/* Stars effect */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-space-purple/20 via-space-dark to-space-dark" />
-      
+      {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,7 +57,7 @@ const Hero = () => {
           >
             <Button 
               size="lg"
-              className="bg-space-purple hover:bg-space-blue text-white rounded-full px-8 transition-all duration-300 group"
+              className="bg-space-purple hover:bg-space-blue text-white rounded-full px-8 transition-all duration-300 group backdrop-blur-sm"
             >
               Get Started
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -67,16 +65,13 @@ const Hero = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="rounded-full px-8 border-space-purple text-space-purple hover:bg-space-purple hover:text-white"
+              className="rounded-full px-8 border-space-purple text-space-purple hover:bg-space-purple hover:text-white backdrop-blur-sm"
             >
               Learn More
             </Button>
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Animated gradient orb */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gradient-to-r from-space-purple to-space-blue rounded-full filter blur-3xl opacity-20 animate-pulse-glow" />
     </div>
   );
 };
