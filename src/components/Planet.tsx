@@ -11,7 +11,7 @@ const Planet = ({ size, position, animation, className }: PlanetProps) => {
   return (
     <div
       className={cn(
-        "planet",
+        "planet before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-space-purple/50 before:to-space-blue/50 before:blur-xl before:opacity-50",
         animation,
         className
       )}
